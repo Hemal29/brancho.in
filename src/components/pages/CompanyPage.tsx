@@ -21,7 +21,6 @@ import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABand from "@/components/sections/CTABand";
 import { LEADERSHIP, VALUES } from "@/lib/data";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const PILLARS = [
   {
@@ -54,27 +53,7 @@ export default function CompanyPage() {
         eyebrow="About Brancho"
         title="Built in Gujarat. Built for every Indian home."
         description="Brancho is an Indian technology platform transforming home services through trust, transparency and skilled professionals — from a single Junagadh garage to a growing movement."
-      >
-        <div className="flex flex-wrap gap-8">
-          {[
-            { value: 100, suffix: "K+", label: "Families served" },
-            { value: 5000, suffix: "+", label: "Professionals" },
-            { value: 25, suffix: "+", label: "Cities" },
-            { value: 4.9, suffix: "★", label: "Avg. rating", decimal: true },
-          ].map((s) => (
-            <div key={s.label}>
-              <p className="font-heading text-3xl font-bold text-ink">
-                {s.decimal ? (
-                  "4.9★"
-                ) : (
-                  <AnimatedCounter value={s.value} suffix={s.suffix} />
-                )}
-              </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-widest text-muted">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </PageHero>
+      />
 
       {/* Manifesto — long-form About Brancho content */}
       <section className="bg-surface py-24 lg:py-32">

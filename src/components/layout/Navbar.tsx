@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { Menu, X, Sun, Moon, ArrowRight, ChevronDown, Search, Droplets, Home, Zap, HeartHandshake, GraduationCap, ArrowUpRight } from "lucide-react";
@@ -17,22 +18,31 @@ function Logo() {
         alt="Brancho logo"
         width={141}
         height={32}
-        className="h-6 w-auto object-contain sm:h-8"
+        className="h-5 w-auto object-contain sm:h-8"
         priority
       />
     </Link>
   );
 }
 
+// Routes whose page hero is a dark (navy) surface when the navbar is transparent.
+// The navbar renders white-on-transparent text only over these; everywhere else
+// it must fall back to theme-aware (surface) colors or it becomes invisible.
+const DARK_HERO_PATHS = new Set(["/", "/services", "/how-it-works", "/app", "/careers"]);
+
 function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (stored !== null) {
+      setTheme(stored);
+      document.documentElement.classList.toggle("dark", stored === "dark");
+      return;
+    }
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = stored ?? (prefersDark ? "dark" : "light");
-    setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
+    setTheme(prefersDark ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", prefersDark);
   }, []);
 
   const toggle = () => {
@@ -78,6 +88,8 @@ export default function Navbar() {
   const dropdownRef = useRef<HTMLUListElement>(null);
   const { theme, toggle } = useTheme();
   const { scrollY } = useScroll();
+  const pathname = usePathname();
+  const heroDark = DARK_HERO_PATHS.has(pathname);
 
   useEffect(() => {
     return scrollY.on("change", (y) => setScrolled(y > 40));
@@ -103,9 +115,22 @@ export default function Navbar() {
   const toggleDropdown = (name: string) =>
     setActiveDropdown((v) => (v === name ? null : name));
 
+  // When scrolled, or at the top of a page with a light hero, the bar must use
+  // theme-aware colors. White chrome is only used over dark (navy) heroes.
+  const lightChrome = scrolled || !heroDark;
+
   const linkClass = cn(
     "inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
-    scrolled ? "text-ink/80 hover:text-navy dark:hover:text-white" : "text-white/85 hover:text-white"
+    lightChrome
+      ? "text-ink/80 hover:text-navy dark:text-white/85 dark:hover:text-white"
+      : "text-white/85 hover:text-white"
+  );
+
+  const iconBtnClass = cn(
+    "flex h-10 w-10 items-center justify-center rounded-full border transition-colors",
+    lightChrome
+      ? "border-line bg-surface-soft text-navy dark:text-white"
+      : "border-white/20 bg-white/10 text-white"
   );
 
   return (
@@ -274,29 +299,19 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           <Link
             href="/search"
             aria-label="Search"
-            className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-full border transition-colors",
-              scrolled
-                ? "border-line bg-surface-soft text-navy dark:text-white"
-                : "border-white/20 bg-white/10 text-white"
-            )}
+            className={iconBtnClass}
           >
             <Search size={16} />
           </Link>
 
           <button
             onClick={toggle}
-            aria-label="Toggle dark mode"
-            className={cn(
-              "hidden h-10 w-10 items-center justify-center rounded-full border transition-colors sm:flex",
-              scrolled
-                ? "border-line bg-surface-soft text-navy dark:text-white"
-                : "border-white/20 bg-white/10 text-white"
-            )}
+            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+            className={iconBtnClass}
           >
             {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
           </button>
@@ -304,23 +319,23 @@ export default function Navbar() {
           <Link
             href={getAppBookingUrl()}
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
-              scrolled
+              "inline-flex h-10 w-10 items-center justify-center gap-1.5 rounded-full border px-0 text-sm font-semibold transition-colors sm:w-auto sm:px-4",
+              lightChrome
                 ? "border-line bg-surface-soft text-navy hover:border-accent hover:text-accent-deep dark:text-white"
                 : "border-white/20 bg-white/10 text-white hover:bg-white/20"
             )}
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy text-xs font-bold text-gold">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy text-xs font-bold text-gold">
               <span>B</span>
             </span>
-            Get the App
+            <span className="hidden sm:inline">Get the App</span>
           </Link>
 
           <Link
             href={getAppBookingUrl()}
             className={cn(
               "group hidden items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all lg:inline-flex",
-              scrolled
+              lightChrome
                 ? "bg-navy text-white hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110"
                 : "bg-white text-navy hover:bg-secondary"
             )}
@@ -334,7 +349,7 @@ export default function Navbar() {
             aria-label="Open menu"
             className={cn(
               "flex h-10 w-10 items-center justify-center rounded-full border lg:hidden",
-              scrolled
+              lightChrome
                 ? "border-line bg-surface-soft text-navy dark:text-white"
                 : "border-white/20 bg-white/10 text-white"
             )}

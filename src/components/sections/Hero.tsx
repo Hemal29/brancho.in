@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen flex-col justify-end overflow-hidden bg-navy text-white"
+      className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-navy text-white"
     >
       {/* Cinematic background */}
       <motion.div style={{ y: bgY }} className="absolute inset-0">
@@ -72,7 +72,7 @@ export default function Hero() {
         variants={item}
         initial="hidden"
         animate="show"
-        className="container-wide relative z-10 pt-36"
+        className="container-wide relative z-10 pt-24"
       >
         <div className="flex flex-wrap items-center gap-3">
           <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-wide text-white/90">

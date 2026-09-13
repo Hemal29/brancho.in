@@ -44,16 +44,16 @@ export default function CitiesPage() {
             <div className="relative aspect-square overflow-hidden rounded-3xl border border-line bg-surface-soft">
               <div className="dot-grid absolute inset-0 opacity-60" />
 
-              <div className="absolute inset-0 opacity-40" aria-hidden="true">
+              <div className="absolute inset-0 text-navy opacity-40 dark:text-white" aria-hidden="true">
                 <svg width="100%" height="100%" viewBox="0 0 500 500" preserveAspectRatio="none">
-                  <line x1="100" y1="0" x2="100" y2="500" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="200" y1="0" x2="200" y2="500" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="300" y1="0" x2="300" y2="500" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="400" y1="0" x2="400" y2="500" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="0" y1="100" x2="500" y2="100" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="0" y1="200" x2="500" y2="200" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="0" y1="300" x2="500" y2="300" stroke="#181A1F" strokeOpacity="0.06" />
-                  <line x1="0" y1="400" x2="500" y2="400" stroke="#181A1F" strokeOpacity="0.06" />
+                  <line x1="100" y1="0" x2="100" y2="500" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="200" y1="0" x2="200" y2="500" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="300" y1="0" x2="300" y2="500" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="400" y1="0" x2="400" y2="500" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="0" y1="100" x2="500" y2="100" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="0" y1="200" x2="500" y2="200" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="0" y1="300" x2="500" y2="300" stroke="currentColor" strokeOpacity="0.06" />
+                  <line x1="0" y1="400" x2="500" y2="400" stroke="currentColor" strokeOpacity="0.06" />
                 </svg>
               </div>
 
@@ -84,7 +84,7 @@ export default function CitiesPage() {
                     <span className="relative flex h-5 w-5 items-center justify-center rounded-full bg-accent ring-4 ring-accent/20">
                       <span className="h-1.5 w-1.5 rounded-full bg-white" />
                     </span>
-                    <span className="mt-2 whitespace-nowrap rounded-full border border-line bg-white px-3 py-1 text-[11px] font-semibold text-navy shadow-lg">
+                    <span className="mt-2 whitespace-nowrap rounded-full border border-line bg-white px-3 py-1 text-[11px] font-semibold text-navy shadow-lg dark:bg-navy dark:text-white">
                       {city.name}
                     </span>
                   </div>

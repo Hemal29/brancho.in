@@ -115,7 +115,7 @@ export const TESTIMONIALS = [
   {
     type: "customer",
     name: "Rahul Mehta",
-    location: "Rajkot",
+    location: "Veraval",
     rating: 5,
     quote:
       "Transparent pricing changed everything for me. I knew the exact cost before anyone stepped into my home. No haggling, no hidden charges, just honest work.",
@@ -124,7 +124,7 @@ export const TESTIMONIALS = [
   {
     type: "customer",
     name: "Anjali Desai",
-    location: "Junagadh",
+    location: "Veraval",
     rating: 5,
     quote:
       "As a working professional, live tracking means I never have to wait around. Brancho's app feels like booking a cab, but for my home.",
@@ -142,7 +142,7 @@ export const TESTIMONIALS = [
   {
     type: "professional",
     name: "Manoj Rathod",
-    location: "Junagadh",
+    location: "Veraval",
     rating: 5,
     quote:
       "The training, the uniform, the tools — Brancho treats us like the professionals we are. My customers trust me instantly because I'm part of Brancho.",
@@ -151,7 +151,7 @@ export const TESTIMONIALS = [
   {
     type: "customer",
     name: "Kavita Nair",
-    location: "Junagadh",
+    location: "Veraval",
     rating: 5,
     quote:
       "From booking to payment, everything happened inside the app. Digital invoices made my society maintenance records perfectly simple.",
