@@ -12,7 +12,7 @@ const QUICK_REPLIES = [
 ];
 
 const AUTO_REPLY =
-  "Thanks for reaching out to Brancho! Our team usually responds in under a minute between 9 AM – 8 PM IST. For instant help, you can also call 1800 123 4567.";
+  "Thanks for reaching out to Brancho! Our team usually responds in under a minute between 9 AM – 8 PM IST. For instant help, you can also call 7572 836402.";
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
@@ -143,8 +143,8 @@ export default function ChatWidget() {
             <div className="flex items-center justify-center gap-2 border-t border-line bg-surface-soft py-2.5 text-xs text-muted">
               <Headphones size={13} />
               Prefer to talk? Call{" "}
-              <a href="tel:+9118001234567" className="font-semibold text-accent-deep">
-                1800 123 4567
+              <a href="tel:+917572836402" className="font-semibold text-accent-deep">
+                7572 836402
               </a>
             </div>
           </motion.div>

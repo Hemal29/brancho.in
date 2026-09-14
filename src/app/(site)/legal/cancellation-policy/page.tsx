@@ -53,7 +53,7 @@ const SECTIONS = [
     id: "contact",
     title: "Questions?",
     body: [
-      "For help with a cancellation, contact support@brancho.in or call 1800 123 4567 — our team will sort it out quickly.",
+      "For help with a cancellation, contact support@brancho.in or call 7572 836402 — our team will sort it out quickly.",
     ],
   },
 ];

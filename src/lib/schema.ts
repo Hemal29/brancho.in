@@ -11,7 +11,7 @@ export const jsonLd = {
         "India's trusted home services platform connecting homeowners with background-verified professionals.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Somnath Road",
+        streetAddress: "Gir Somnath",
         addressLocality: "Veraval",
         addressRegion: "Gujarat",
         postalCode: "362265",
@@ -19,15 +19,15 @@ export const jsonLd = {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+91-1800-123-4567",
+        telephone: "+91-7572-836402",
         contactType: "customer service",
         email: "support@brancho.in",
         availableLanguage: ["English", "Hindi", "Gujarati"],
       },
       sameAs: [
-        "https://www.linkedin.com/company/brancho",
+        "https://www.linkedin.com/company/brancho-india/",
         "https://twitter.com/brancho",
-        "https://www.instagram.com/brancho",
+        "https://www.instagram.com/brancho.group?stkn=anJxN25pOTA5NHo3&utm_source=qr",
         "https://youtube.com/@brancho",
         "https://facebook.com/brancho",
       ],

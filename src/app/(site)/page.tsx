@@ -10,13 +10,11 @@ import Cities from "@/components/sections/Cities";
 import Sustainability from "@/components/sections/Sustainability";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
-import Loader from "@/components/layout/Loader";
 import { faqLd } from "@/lib/schema";
 
 export default function Home() {
   return (
     <>
-      <Loader />
       <Hero />
       <ServicesMarquee />
       <Services />

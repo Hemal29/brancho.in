@@ -1,18 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Newsletter from "@/components/corporate/Newsletter";
 import { CONTACT, BUSINESSES, LEGAL_FAQ_LINKS } from "@/lib/corporate";
 
 const SocialLinkedIn = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V24H.24V8.25zM8.34 8.25h4.33v2.15h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V24h-4.52v-8.02c0-1.91-.03-4.37-2.66-4.37-2.67 0-3.08 2.08-3.08 4.23V24H8.34V8.25z" />
-  </svg>
-);
-
-const SocialTwitter = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M18.24 2.25h3.31l-7.23 8.26L22.5 21.75h-6.66l-5.22-6.82-5.97 6.82H1.34l7.73-8.84L1.5 2.25h6.83l4.72 6.24 5.19-6.24zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z" />
   </svg>
 );
 
@@ -24,9 +18,9 @@ const SocialInstagram = () => (
   </svg>
 );
 
-const SocialYoutube = () => (
+const SocialWhatsApp = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.6 15.6V8.4l6.23 3.6L9.6 15.6z" />
+    <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.02a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.73 9.73 0 0 1-1.5-5.19c0-5.4 4.4-9.8 9.82-9.8a9.76 9.76 0 0 1 9.8 9.8c0 5.41-4.4 9.8-9.79 9.8zM20.42 3.6A11.7 11.7 0 0 0 12.04 0C5.51 0 .23 5.28.23 11.81c0 2.09.55 4.12 1.59 5.92L.06 24l6.4-1.68a11.8 11.8 0 0 0 5.57 1.42h.01c6.54 0 11.81-5.28 11.81-11.81 0-3.16-1.23-6.13-3.43-8.33z" />
   </svg>
 );
 
@@ -77,10 +71,9 @@ const footerColumns = [
 ];
 
 const socials = [
-  { label: "LinkedIn", icon: SocialLinkedIn, href: "https://www.linkedin.com/company/brancho" },
-  { label: "Twitter", icon: SocialTwitter, href: "https://twitter.com/brancho" },
-  { label: "Instagram", icon: SocialInstagram, href: "https://www.instagram.com/brancho" },
-  { label: "YouTube", icon: SocialYoutube, href: "https://youtube.com/@brancho" },
+  { label: "LinkedIn", icon: SocialLinkedIn, href: "https://www.linkedin.com/company/brancho-india/" },
+  { label: "Instagram", icon: SocialInstagram, href: "https://www.instagram.com/brancho.group?stkn=anJxN25pOTA5NHo3&utm_source=qr" },
+  { label: "WhatsApp", icon: SocialWhatsApp, href: `https://wa.me/${CONTACT.whatsapp.value.replace(/[^\d]/g, "")}` },
 ];
 
 export default function Footer() {
@@ -113,9 +106,16 @@ export default function Footer() {
                 {CONTACT.corporate.value}
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={16} className="shrink-0 text-gold" />
-                <a href={`tel:${CONTACT.support.phone.replace(/\s/g, "")}`} className="transition-colors hover:text-white">
-                  {CONTACT.support.phone}
+                <span className="shrink-0 text-gold">
+                  <SocialWhatsApp />
+                </span>
+                <a
+                  href={`https://wa.me/${CONTACT.whatsapp.value.replace(/[^\d]/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  {CONTACT.whatsapp.value}
                 </a>
               </li>
               <li className="flex items-center gap-3">

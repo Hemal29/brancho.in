@@ -290,7 +290,7 @@ const SECTIONS = [
     id: "contact",
     title: "Contact Brancho",
     body: [
-      "For questions or reports regarding this Policy: WhatsApp / Phone: +91 75728 36402; Email: support@brancho.in; Address: Somnath Road, Veraval, Gujarat – 362265, India. For policy-related reports use the subject \"ACCEPTABLE USE — BRANCHO\".",
+      "For questions or reports regarding this Policy: WhatsApp / Phone: +91 75728 36402; Email: support@brancho.in; Address: Veraval, Gir Somnath 362265, India. For policy-related reports use the subject \"ACCEPTABLE USE — BRANCHO\".",
     ],
   },
 ];

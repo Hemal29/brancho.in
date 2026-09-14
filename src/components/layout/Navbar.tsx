@@ -10,10 +10,15 @@ import { cn } from "@/lib/utils";
 import { getAppBookingUrl } from "@/lib/app-links";
 import type { LucideIcon } from "lucide-react";
 
-function Logo() {
+function Logo({ id, hidden }: { id?: string; hidden?: boolean }) {
   return (
-    <Link href="/" className="flex items-center" aria-label="Brancho home">
+    <Link
+      href="/"
+      className={cn("flex items-center", hidden && "pointer-events-none opacity-0")}
+      aria-label="Brancho home"
+    >
       <Image
+        id={id}
         src="/logo2.png"
         alt="Brancho logo"
         width={141}
@@ -81,7 +86,7 @@ const FUTURE_MENU = [
   { label: "Investor Relations", href: "/future/investors", description: "Transparent, long-term value" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -133,6 +138,17 @@ export default function Navbar() {
       : "border-white/20 bg-white/10 text-white"
   );
 
+  const revealItemClass = () =>
+    cn(
+      "transition-[opacity,transform] duration-500 ease-out",
+      navStage === 0
+        ? "pointer-events-none translate-y-1.5 opacity-0"
+        : "translate-y-0 opacity-100"
+    );
+
+  const revealItemStyle = (i: number) =>
+    navStage === 0 ? undefined : { transitionDelay: `${0.05 + i * 0.07}s` };
+
   return (
     <header
       className={cn(
@@ -143,16 +159,16 @@ export default function Navbar() {
       )}
     >
       <nav className="container-wide flex h-20 items-center justify-between" aria-label="Main navigation">
-        <Logo />
+        <Logo id="nav-logo" hidden={navStage < 2} />
 
         <ul className="hidden items-center gap-1 lg:flex" ref={dropdownRef}>
-          <li>
+          <li className={revealItemClass()} style={revealItemStyle(0)}>
             <Link href="/services" className={linkClass}>
               Services
             </Link>
           </li>
 
-          <li className="relative">
+          <li className={cn("relative", revealItemClass())} style={revealItemStyle(1)}>
             <button
               onClick={() => toggleDropdown("businesses")}
               aria-expanded={activeDropdown === "businesses"}
@@ -208,7 +224,7 @@ export default function Navbar() {
             </AnimatePresence>
           </li>
 
-          <li className="relative">
+          <li className={cn("relative", revealItemClass())} style={revealItemStyle(2)}>
             <button
               onClick={() => toggleDropdown("company")}
               aria-expanded={activeDropdown === "company"}
@@ -250,7 +266,7 @@ export default function Navbar() {
             </AnimatePresence>
           </li>
 
-          <li className="relative">
+          <li className={cn("relative", revealItemClass())} style={revealItemStyle(3)}>
             <button
               onClick={() => toggleDropdown("future")}
               aria-expanded={activeDropdown === "future"}
@@ -292,14 +308,22 @@ export default function Navbar() {
             </AnimatePresence>
           </li>
 
-          <li>
+          <li className={revealItemClass()} style={revealItemStyle(4)}>
             <Link href="/careers" className={linkClass}>
               Careers
             </Link>
           </li>
         </ul>
 
-        <div className="flex items-center gap-1.5 sm:gap-3">
+        <div
+          className={cn(
+            "flex items-center gap-1.5 transition-[opacity,transform] duration-500 ease-out sm:gap-3",
+            navStage === 0
+              ? "pointer-events-none translate-y-1.5 opacity-0"
+              : "translate-y-0 opacity-100"
+          )}
+          style={navStage === 0 ? undefined : { transitionDelay: "0.45s" }}
+        >
           <Link
             href="/search"
             aria-label="Search"
