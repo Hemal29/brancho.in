@@ -14,7 +14,7 @@ const HELP_CHANNELS = [
     icon: Phone,
     title: "Call us",
     description: `Speak to a human — ${CONTACT.support.phone}`,
-    href: "tel:+9118001234567",
+    href: `tel:+${CONTACT.support.phone.replace(/[^\d]/g, "")}`,
     action: "Call now",
   },
   {

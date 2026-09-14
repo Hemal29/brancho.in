@@ -61,7 +61,7 @@ const SECTIONS = [
     id: "contact",
     title: "Questions?",
     body: [
-      "For any refund-related question, email support@brancho.in or call 1800 123 4567. Our team responds within one business day.",
+      "For any refund-related question, email support@brancho.in or call 7572 836402. Our team responds within one business day.",
     ],
   },
 ];

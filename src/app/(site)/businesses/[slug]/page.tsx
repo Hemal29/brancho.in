@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             parentOrganization: { name: "Brancho Technologies Pvt. Ltd." },
             description: business.description,
             url: `https://brancho.in/businesses/${business.slug}`,
-            contactPoint: { "@type": "ContactPoint", telephone: "+91 1800 123 4567", contactType: "customer service" },
+            contactPoint: { "@type": "ContactPoint", telephone: "+91 7572 836402", contactType: "customer service" },
           }),
         }}
       />

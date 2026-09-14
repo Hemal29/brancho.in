@@ -263,7 +263,7 @@ const SECTIONS = [
     id: "contact",
     title: "Contact Brancho",
     body: [
-      "For intellectual-property matters: WhatsApp / Phone: +91 75728 36402; Email: support@brancho.in; Address: Somnath Road, Veraval, Gujarat – 362265, India.",
+      "For intellectual-property matters: WhatsApp / Phone: +91 75728 36402; Email: support@brancho.in; Address: Veraval, Gir Somnath 362265, India.",
       "General IP enquiries: \"INTELLECTUAL PROPERTY — BRANCHO\". Copyright complaints: \"INTELLECTUAL PROPERTY — COPYRIGHT REPORT\". Trademark complaints: \"INTELLECTUAL PROPERTY — TRADEMARK REPORT\".",
     ],
   },

@@ -257,8 +257,8 @@ export const COMPANY_LINKS = [
 
 export const CONTACT = {
   email: "support@brancho.in",
-  phone: "+91 1800 123 4567",
-  address: "Somnath Road, Veraval, Gujarat 362265",
+  phone: "+91 7572 836402",
+  address: "Veraval, Gir Somnath 362265",
 };
 
 export type Service = {

@@ -19,13 +19,13 @@ export default function Contact() {
       icon: MapPin,
       title: "Corporate Office",
       lines: [CONTACT.address],
-      href: "https://maps.google.com/?q=Somnath+Road,Veraval",
+      href: "https://maps.google.com/?q=Veraval,Gir+Somnath,362265",
     },
     {
       icon: Phone,
       title: "Phone",
       lines: [CONTACT.phone, "Mon–Sun · 8 AM to 9 PM"],
-      href: "tel:+9118001234567",
+      href: `tel:+${CONTACT.phone.replace(/[^\d]/g, "")}`,
     },
     {
       icon: Mail,
@@ -185,7 +185,7 @@ export default function Contact() {
 
             <div className="relative flex-1 overflow-hidden rounded-3xl border border-line">
               <iframe
-                title="Brancho Office — Somnath Road, Veraval"
+                title="Brancho Office — Veraval, Gir Somnath 362265"
                 src="https://maps.google.com/maps?q=Veraval%2C%20Gujarat&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 className="h-72 w-full grayscale-[35%] transition-all duration-500 hover:grayscale-0 lg:h-full lg:min-h-[280px]"
                 loading="lazy"

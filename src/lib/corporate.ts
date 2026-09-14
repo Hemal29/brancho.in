@@ -4,34 +4,34 @@ export const CORPORATE = {
   tagline: "Home, Perfectly Taken Care Of.",
   domain: "brancho.in",
   founded: 2019,
-  registeredOffice: "Somnath Road, Veraval, Gujarat 362265",
+  registeredOffice: "Veraval, Gir Somnath 362265",
   ctaEmail: "care@brancho.in",
 };
 
 export const CONTACT = {
   corporate: {
     label: "Corporate Office",
-    value: "Somnath Road, Veraval, Gujarat 362265",
-    mapsUrl: "https://www.google.com/maps?q=Somnath+Road,+Veraval,+Gujarat",
+    value: "Veraval, Gir Somnath 362265",
+    mapsUrl: "https://www.google.com/maps?q=Veraval,+Gir+Somnath,+362265",
   },
-  support: { label: "Customer Support", email: "support@brancho.in", phone: "+91 1800 123 4567" },
+  support: { label: "Customer Support", email: "support@brancho.in", phone: "+91 7572 836402" },
   business: { label: "Business Enquiries", email: "business@brancho.in", phone: "+91 79 4000 5000" },
   media: { label: "Media Enquiries", email: "press@brancho.in", phone: "+91 79 4000 5001" },
   careers: { label: "Careers", email: "careers@brancho.in" },
   hr: { label: "HR & Partnerships", email: "partners@brancho.in" },
-  whatsapp: { label: "WhatsApp", value: "+91 98980 12345" },
+  whatsapp: { label: "WhatsApp", value: "+91 7572 836402" },
   hours: [
     { label: "Monday – Saturday", value: "9:00 AM – 8:00 PM IST" },
     { label: "Sunday", value: "10:00 AM – 6:00 PM IST" },
     { label: "Emergency Support", value: "24 × 7" },
   ],
-  emergency: { label: "Emergency Hotline", phone: "+91 1800 123 4568" },
+  emergency: { label: "Emergency Hotline", phone: "+91 7572 836402" },
 };
 
 export const SOCIALS = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/brancho" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/brancho-india/" },
   { label: "Twitter", href: "https://twitter.com/brancho" },
-  { label: "Instagram", href: "https://www.instagram.com/brancho" },
+  { label: "Instagram", href: "https://www.instagram.com/brancho.group?stkn=anJxN25pOTA5NHo3&utm_source=qr" },
   { label: "YouTube", href: "https://youtube.com/@brancho" },
   { label: "Facebook", href: "https://facebook.com/brancho" },
 ];
@@ -707,5 +707,5 @@ export const FAQS_EXTRA = [
   { q: "How do refunds work?", a: "Refunds for cancellations or quality issues are processed within 5–7 working days to the original payment method or Brancho wallet. See the Refund Policy." },
   { q: "Do you offer emergency services?", a: "Yes — Brancho Urgent Care guarantees a 60-minute response for emergencies, 24 × 7." },
   { q: "Can I pay in cash?", a: "Yes. Pay online via UPI, cards or wallets, or pay by cash on completion where available." },
-  { q: "How do I contact support?", a: "Email support@brancho.in, call 1800 123 4567, or use live chat — our team answers in minutes." },
+  { q: "How do I contact support?", a: "Email support@brancho.in, call +91 7572 836402, or use live chat — our team answers in minutes." },
 ];
