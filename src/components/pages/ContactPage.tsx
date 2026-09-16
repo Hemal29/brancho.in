@@ -51,7 +51,7 @@ export default function ContactPage() {
       <PageHero
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Contact", href: "/contact" }]}
         eyebrow="Contact"
-        title="Talk to the team behind 100,000 happy homes."
+        title="Talk to the Brancho team."
         description="Book a service, ask a question or explore a partnership. Our team responds within hours, in English, Hindi or Gujarati."
       />
 

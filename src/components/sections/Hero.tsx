@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { Download, ArrowRight, UserPlus, Star, ShieldCheck } from "lucide-react";
+import { Download, ArrowRight, UserPlus } from "lucide-react";
 import MagneticButton from "@/components/ui/MagneticButton";
 
 const heroVideoSources = [
@@ -66,25 +66,6 @@ export default function Hero() {
         animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.15, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      {/* Trust badge */}
-      <motion.div
-        variants={item}
-        initial="hidden"
-        animate="show"
-        className="container-wide relative z-10 pt-24"
-      >
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-wide text-white/90">
-            <ShieldCheck size={14} className="text-gold" />
-            GST-Registered · ISO 9001 Certified Operations
-          </span>
-          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-wide text-white/90">
-            <Star size={14} className="fill-gold text-gold" />
-            4.9/5 rated by 12,000+ customers
-          </span>
-        </div>
-      </motion.div>
 
       {/* Headline */}
       <motion.div

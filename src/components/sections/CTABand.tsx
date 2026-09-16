@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Download, ArrowRight, Star } from "lucide-react";
+import { Download, ArrowRight } from "lucide-react";
 
 export default function CTABand() {
   return (
@@ -18,12 +18,7 @@ export default function CTABand() {
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-            <Star size={13} className="fill-gold text-gold" />
-            Trusted by 100,000+ Indian families
-          </span>
-
-          <h2 className="mx-auto mt-8 max-w-3xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <h2 className="mx-auto mt-2 max-w-3xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Your home deserves the{" "}
             <span className="text-gradient">Brancho standard.</span>
           </h2>

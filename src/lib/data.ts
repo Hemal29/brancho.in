@@ -165,13 +165,6 @@ export const CITIES = [
 
 export const NEWS = [
   {
-    category: "Company News",
-    title: "Brancho crosses 100,000 happy customers across Gujarat",
-    excerpt: "A milestone built on trust, verification and service excellence.",
-    date: "July 2026",
-    readTime: "4 min read",
-  },
-  {
     category: "Technology",
     title: "How AI matches the right professional to your home",
     excerpt: "Inside the smart allocation engine behind every Brancho booking.",
@@ -282,7 +275,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Licensed electricians handle everything from a flickering light to a full home rewire. Every job includes a safety check, and all materials are brand-grade with transparent billing for parts.",
     icon: "Zap",
-    image: "/services/electrician.svg",
+    image: "/services/electric-care.jpg",
     price: "From ₹249",
     duration: "30–90 min",
     includes: [
@@ -301,7 +294,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Leak detection, tap and valve replacement, tank cleaning and complete bathroom fittings. Licensed plumbers arrive with their own tools and a transparent quote before work begins.",
     icon: "Droplets",
-    image: "/services/plumbing.svg",
+    image: "/services/plumbing-care.jpg",
     price: "From ₹299",
     duration: "30–90 min",
     includes: [
@@ -320,7 +313,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Specialist technicians for drum problems, leaks, draining faults and noise issues on every major brand. We also install and do annual servicing of your machine.",
     icon: "WashingMachine",
-    image: "/services/washing-machine-repair.svg",
+    image: "/services/washing-care.jpg",
     price: "From ₹349",
     duration: "45–90 min",
     includes: [
@@ -338,7 +331,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Our certified AC technicians strip down, clean and reassemble your air conditioner with professional tools, anti-bacterial sprays and a full performance check. We clean filters, coils, fins and condensate trays so your AC cools faster, smells fresher and uses less power.",
     icon: "Snowflake",
-    image: "/services/ac-cleaning.svg",
+    image: "/services/ac-care.jpg",
     price: "From ₹449",
     duration: "45–60 min",
     includes: [
@@ -357,7 +350,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Certified refrigeration technicians fix cooling failures, gas leaks, noisy compressors and damaged door seals — with genuine gas and genuine spares only.",
     icon: "Refrigerator",
-    image: "/services/refrigerator-repair.svg",
+    image: "/services/refrigerator-care.jpg",
     price: "From ₹349",
     duration: "45–90 min",
     includes: [
@@ -375,7 +368,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Enjoy salon-quality beauty and wellness services without stepping out. Brancho Beauty At Home brings trained, hygiene-certified beauticians to your doorstep with professional products and sanitised kits — for facials, clean-ups, waxing, manicure, pedicure and more.",
     icon: "Sparkles",
-    image: "/services/beauty-at-home.svg",
+    image: "/services/beauty-at-home.jpg",
     price: "Starting from ₹—",
     duration: "60–120 min",
     includes: [
@@ -393,7 +386,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Keep your home powered through every outage. Brancho Power Care covers inverter installation, battery check-ups, wiring safety inspections and backup power maintenance by certified electricians who follow strict safety standards.",
     icon: "BatteryCharging",
-    image: "/services/power-care.svg",
+    image: "/services/power-care.jpg",
     price: "Starting from ₹—",
     duration: "45–90 min",
     includes: [
@@ -411,7 +404,7 @@ export const SERVICES_DETAILED: Service[] = [
     longDescription:
       "Keep your water pure with filter changes, TDS balancing, membrane cleaning and a full purification audit by trained water-systems technicians.",
     icon: "Droplet",
-    image: "/services/ro-service.svg",
+    image: "/services/ro-care.jpg",
     price: "From ₹499",
     duration: "45–60 min",
     includes: [
@@ -465,7 +458,7 @@ export const VALUES = [
   },
   {
     title: "Respect for Professionals",
-    description: "Dignity, fair pay and growth for the 5,000+ people who make Brancho happen every day.",
+    description: "Dignity, fair pay and growth for the people who make Brancho happen every day.",
   },
   {
     title: "Obsess Over Detail",
@@ -552,7 +545,7 @@ export const COMPANY_TIMELINE = [
   { year: "2019", title: "Founded in Junagadh", description: "Brancho begins with one van, three professionals and a promise of trust." },
   { year: "2021", title: "Gujarat expansion", description: "Brancho grows across Saurashtra, reaching Rajkot and Veraval." },
   { year: "2023", title: "Technology platform", description: "AI allocation, live tracking and digital-first operations go live." },
-  { year: "2026", title: "National vision", description: "Serving over 100,000 families with a national roadmap ahead." },
+  { year: "2026", title: "National vision", description: "A national roadmap ahead, with a measured international vision." },
 ];
 
 export const APP_SCREENS = [

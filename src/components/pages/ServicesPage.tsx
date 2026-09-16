@@ -61,22 +61,8 @@ export default function ServicesPage() {
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }]}
         eyebrow="Our Services"
         title="Every home service. One trusted standard."
-        description="13 handcrafted service categories, delivered by background-verified professionals with upfront pricing and a 90-day workmanship warranty on every job."
-      >
-        <div className="flex flex-wrap gap-6">
-          {[
-            { v: "13", l: "Service categories" },
-            { v: "5,000+", l: "Verified professionals" },
-            { v: "4.9★", l: "Average rating" },
-            { v: "90-day", l: "Warranty included" },
-          ].map((s) => (
-            <div key={s.l}>
-              <p className="font-heading text-3xl font-bold text-white">{s.v}</p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-widest text-white/50">{s.l}</p>
-            </div>
-          ))}
-        </div>
-      </PageHero>
+        description="Handcrafted home services delivered by background-verified professionals — with upfront pricing and a workmanship warranty on every job."
+      />
 
       {/* Service cards */}
       <section className="bg-surface-soft py-24 lg:py-32">

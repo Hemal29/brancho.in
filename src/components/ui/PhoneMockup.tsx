@@ -154,7 +154,7 @@ export default function PhoneMockup({ title, features, icons, theme, compact = f
                     <Star key={r} size={11} className="fill-gold text-gold" />
                   ))}
                   <span className="ml-1 text-[9px] font-medium text-muted">
-                    {isCustomer ? "Rate your last service" : "4.9 · Average rating"}
+                    {isCustomer ? "Rate your last service" : "Your rating & reviews"}
                   </span>
                 </div>
               </div>

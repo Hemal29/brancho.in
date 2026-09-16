@@ -112,10 +112,17 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } }).__lenis;
+    if (open) lenis?.stop();
+    else lenis?.start();
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const toggleDropdown = (name: string) =>
     setActiveDropdown((v) => (v === name ? null : name));
@@ -150,6 +157,7 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
     navStage === 0 ? undefined : { transitionDelay: `${0.05 + i * 0.07}s` };
 
   return (
+    <>
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-[70] transition-all duration-500",
@@ -382,6 +390,7 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
           </button>
         </div>
       </nav>
+    </header>
 
       <AnimatePresence>
         {open && (
@@ -390,10 +399,10 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[85] flex flex-col bg-navy lg:hidden"
+            className="fixed inset-0 z-[85] flex h-dvh flex-col overflow-y-auto bg-navy lg:hidden"
           >
-            <div className="dot-grid-light absolute inset-0 opacity-30" />
-            <div className="container-wide relative flex h-20 items-center justify-between">
+            <div className="dot-grid-light pointer-events-none absolute inset-0 opacity-30" />
+            <div className="container-wide relative flex h-20 shrink-0 items-center justify-between">
               <Logo />
               <button
                 onClick={() => setOpen(false)}
@@ -422,9 +431,9 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="group flex items-center justify-between border-b border-white/10 py-5"
+                    className="group flex items-center justify-between border-b border-white/10 py-4 sm:py-5"
                   >
-                    <span className="font-heading text-3xl font-semibold text-white transition-colors group-hover:text-gold">
+                    <span className="font-heading text-2xl font-semibold text-white transition-colors group-hover:text-gold sm:text-3xl">
                       {link.label}
                     </span>
                     <ChevronDown className="rotate-[-90deg] text-gold" size={20} />
@@ -436,7 +445,7 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="relative px-8 pb-10"
+              className="relative shrink-0 px-8 pb-8 pt-4"
             >
               <Link
                 href={getAppBookingUrl()}
@@ -449,6 +458,6 @@ export default function Navbar({ navStage = 0 }: { navStage?: 0 | 1 | 2 }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
