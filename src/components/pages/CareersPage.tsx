@@ -21,6 +21,7 @@ export default function CareersPage() {
   return (
     <>
       <PageHero
+        image="/heroes/careers.jpg"
         dark
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Careers", href: "/careers" }]}
         eyebrow="Careers"

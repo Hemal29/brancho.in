@@ -11,6 +11,7 @@ export default function CitiesPage() {
   return (
     <>
       <PageHero
+        image="/heroes/cities.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Cities", href: "/cities" }]}
         eyebrow="Cities"
         title="Serving Veraval today. Building toward all of India."

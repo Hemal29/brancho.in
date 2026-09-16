@@ -46,6 +46,7 @@ export default async function ServiceDetailPage({
   return (
     <>
       <PageHero
+        image={service.image}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },

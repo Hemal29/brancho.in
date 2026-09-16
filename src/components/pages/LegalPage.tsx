@@ -19,6 +19,7 @@ export default function LegalPage() {
   return (
     <>
       <PageHero
+        image="/heroes/legal.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Legal", href: "/legal" }]}
         eyebrow="Legal"
         title="Compliance, registrations & policies."

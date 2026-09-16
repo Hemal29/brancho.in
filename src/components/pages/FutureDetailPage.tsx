@@ -16,6 +16,16 @@ const statusStyles: Record<FutureDetail["status"], string> = {
   Planned: "bg-blue-400/15 text-blue-400",
 };
 
+const FUTURE_HERO_IMAGES: Record<string, string> = {
+  foundation: "/heroes/careers.jpg",
+  csr: "/heroes/csr.jpg",
+  "innovation-lab": "/heroes/technology.jpg",
+  "ai-platform": "/heroes/ai.jpg",
+  global: "/heroes/global.jpg",
+  investors: "/heroes/sitemap.jpg",
+  sustainability: "/heroes/sustainability.jpg",
+};
+
 export default function FutureDetailPage({ detail }: { detail: FutureDetail }) {
   const idx = FUTURE.findIndex((f) => f.slug === detail.slug);
   const next = FUTURE[(idx + 1) % FUTURE.length];
@@ -23,6 +33,7 @@ export default function FutureDetailPage({ detail }: { detail: FutureDetail }) {
   return (
     <>
       <PageHero
+        image={FUTURE_HERO_IMAGES[detail.slug] ?? "/heroes/future.jpg"}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "The Future", href: "/future" },

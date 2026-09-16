@@ -28,6 +28,7 @@ export default function BusinessesPage() {
   return (
     <>
       <PageHero
+        image="/heroes/businesses.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Businesses", href: "/businesses" }]}
         eyebrow="Brancho Businesses"
         title="One family of companies, caring for every part of home."

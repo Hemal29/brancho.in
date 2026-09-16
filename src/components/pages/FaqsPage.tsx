@@ -37,6 +37,7 @@ export default function FaqsPage() {
   return (
     <>
       <PageHero
+        image="/heroes/faqs.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "FAQs", href: "/faqs" }]}
         eyebrow="Help Centre"
         title="Frequently asked questions."

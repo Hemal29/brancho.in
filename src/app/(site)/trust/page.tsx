@@ -60,6 +60,7 @@ export default function TrustPage() {
   return (
     <>
       <PageHero
+        image="/heroes/trust.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Trust & Safety", href: "/trust" }]}
         eyebrow="Trust & Safety"
         title="Your Home. Your Trust. Our Responsibility."

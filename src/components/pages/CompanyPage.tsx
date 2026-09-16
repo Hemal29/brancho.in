@@ -49,6 +49,7 @@ export default function CompanyPage() {
   return (
     <>
       <PageHero
+        image="/heroes/company.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Company", href: "/company" }]}
         eyebrow="About Brancho"
         title="Built in Gujarat. Built for every Indian home."

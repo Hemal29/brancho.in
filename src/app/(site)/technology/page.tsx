@@ -35,6 +35,7 @@ export default function TechnologyPage() {
   return (
     <>
       <PageHero
+        image="/heroes/technology.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Technology", href: "/technology" }]}
         eyebrow="The Platform"
         title="Powered by Technology. Built for People."

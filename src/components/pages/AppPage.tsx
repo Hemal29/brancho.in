@@ -57,6 +57,7 @@ export default function AppPage() {
   return (
     <>
       <PageHero
+        image="/heroes/app.jpg"
         dark
         breadcrumb={[{ label: "Home", href: "/" }, { label: "App", href: "/app" }]}
         eyebrow="The Brancho App"

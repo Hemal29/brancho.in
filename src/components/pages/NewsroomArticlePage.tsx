@@ -17,6 +17,7 @@ export default function NewsroomArticlePage({ post }: { post: Post }) {
   return (
     <>
       <PageHero
+        image="/heroes/newsroom.jpg"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Newsroom", href: "/newsroom" },

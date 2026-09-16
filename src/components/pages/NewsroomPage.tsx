@@ -14,6 +14,7 @@ export default function NewsroomPage() {
   return (
     <>
       <PageHero
+        image="/heroes/newsroom.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Newsroom", href: "/newsroom" }]}
         eyebrow="Newsroom"
         title="Stories from Brancho."

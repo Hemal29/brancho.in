@@ -21,6 +21,7 @@ export default function LegalLayout({ title, updated, sections, intro }: LegalLa
   return (
     <>
       <PageHero
+        image="/heroes/legal.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: title, href: "#" }]}
         eyebrow="Legal"
         title={title}

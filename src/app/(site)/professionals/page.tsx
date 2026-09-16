@@ -75,6 +75,7 @@ export default function ProfessionalsPage() {
   return (
     <>
       <PageHero
+        image="/heroes/professionals.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Brancho Professionals", href: "/professionals" }]}
         eyebrow="For Service Professionals"
         title="Meet the People Behind Every Service."

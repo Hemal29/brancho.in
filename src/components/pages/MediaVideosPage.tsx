@@ -11,6 +11,7 @@ export default function MediaVideosPage() {
   return (
     <>
       <PageHero
+        image="/heroes/media-videos.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Media", href: "/media/gallery" }, { label: "Videos", href: "/media/videos" }]}
         eyebrow="Media"
         title="Brancho on film."

@@ -11,6 +11,7 @@ export default function MediaGalleryPage() {
   return (
     <>
       <PageHero
+        image="/heroes/media-gallery.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Media", href: "/media/gallery" }, { label: "Gallery", href: "/media/gallery" }]}
         eyebrow="Media"
         title="A look inside Brancho."
