@@ -57,6 +57,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        image="/heroes/services.jpg"
         dark
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }]}
         eyebrow="Our Services"

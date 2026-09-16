@@ -49,6 +49,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        image="/heroes/contact.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Contact", href: "/contact" }]}
         eyebrow="Contact"
         title="Talk to the Brancho team."

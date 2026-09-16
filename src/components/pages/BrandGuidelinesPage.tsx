@@ -24,6 +24,7 @@ export default function BrandGuidelinesPage() {
   return (
     <>
       <PageHero
+        image="/heroes/brand.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Brand Guidelines", href: "/brand-guidelines" }]}
         eyebrow="Brand Guidelines"
         title="The Brancho brand, defined."

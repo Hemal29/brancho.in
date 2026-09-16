@@ -68,6 +68,7 @@ export default function SitemapPage() {
   return (
     <>
       <PageHero
+        image="/heroes/sitemap.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Sitemap", href: "/sitemap" }]}
         eyebrow="Sitemap"
         title="Everything on one page."

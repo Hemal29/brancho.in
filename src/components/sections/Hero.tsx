@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Download, ArrowRight, UserPlus } from "lucide-react";
 import MagneticButton from "@/components/ui/MagneticButton";
@@ -38,13 +39,21 @@ export default function Hero() {
     >
       {/* Cinematic background */}
       <motion.div style={{ y: bgY }} className="absolute inset-0">
+        <Image
+          src="/hero-home-service.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-40"
+          aria-hidden="true"
+        />
         <video
-          className="h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
           autoPlay
           muted
           loop
           playsInline
-          poster="/hero-poster.svg"
+          poster="/hero-home-service.jpg"
           preload="metadata"
           aria-hidden="true"
         >

@@ -13,6 +13,7 @@ export default function FuturePage() {
   return (
     <>
       <PageHero
+        image="/heroes/future.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "The Future", href: "/future" }]}
         eyebrow="The Future"
         title="Where Brancho is going next."

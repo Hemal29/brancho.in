@@ -15,6 +15,7 @@ export default function MediaPressPage() {
   return (
     <>
       <PageHero
+        image="/heroes/media-press.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Media", href: "/media/gallery" }, { label: "Press", href: "/media/press" }]}
         eyebrow="Media"
         title="Press resources for journalists."

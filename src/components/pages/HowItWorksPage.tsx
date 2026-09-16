@@ -17,6 +17,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <PageHero
+        image="/heroes/how-it-works.jpg"
         dark
         breadcrumb={[{ label: "Home", href: "/" }, { label: "How It Works", href: "/how-it-works" }]}
         eyebrow="How It Works"

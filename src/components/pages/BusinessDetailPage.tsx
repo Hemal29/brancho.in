@@ -10,10 +10,19 @@ import FaqList from "@/components/corporate/FaqList";
 import CTABand from "@/components/sections/CTABand";
 import type { Business } from "@/lib/corporate";
 
+const BUSINESS_HERO_IMAGES: Record<string, string> = {
+  water: "/services/ro-care.jpg",
+  "home-care": "/hero-home-service.jpg",
+  "urgent-care": "/services/electric-care.jpg",
+  myfamnest: "/heroes/family.jpg",
+  students: "/heroes/students.jpg",
+};
+
 export default function BusinessDetailPage({ business }: { business: Business }) {
   return (
     <>
       <PageHero
+        image={BUSINESS_HERO_IMAGES[business.slug] ?? "/heroes/businesses.jpg"}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Businesses", href: "/businesses" },

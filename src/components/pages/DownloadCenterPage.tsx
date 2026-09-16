@@ -12,6 +12,7 @@ export default function DownloadCenterPage() {
   return (
     <>
       <PageHero
+        image="/heroes/downloads.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Downloads", href: "/downloads" }]}
         eyebrow="Download Center"
         title="Brand, reports and company documents."

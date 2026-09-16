@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
@@ -12,6 +13,7 @@ type PageHeroProps = {
   breadcrumb: { label: string; href: string }[];
   children?: React.ReactNode;
   dark?: boolean;
+  image?: string;
 };
 
 export default function PageHero({
@@ -21,6 +23,7 @@ export default function PageHero({
   breadcrumb,
   children,
   dark = false,
+  image,
 }: PageHeroProps) {
   return (
     <section
@@ -31,6 +34,25 @@ export default function PageHero({
           : "bg-surface text-ink"
       )}
     >
+      {image && (
+        <>
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            aria-hidden="true"
+          />
+          <div
+            className={cn(
+              "absolute inset-0",
+              dark ? "bg-navy/85" : "bg-surface/88"
+            )}
+            aria-hidden="true"
+          />
+        </>
+      )}
       {dark ? (
         <div className="dot-grid-light absolute inset-0 opacity-40" />
       ) : (

@@ -54,6 +54,7 @@ export default function SearchPage() {
   return (
     <>
       <PageHero
+        image="/heroes/search.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Search", href: "/search" }]}
         eyebrow="Search"
         title="What can we help you find?"

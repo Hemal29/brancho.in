@@ -14,6 +14,7 @@ export default function FounderPage() {
   return (
     <>
       <PageHero
+        image="/heroes/founder.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Founder", href: "/founder" }]}
         eyebrow="The Founder"
         title={FOUNDER.name}
