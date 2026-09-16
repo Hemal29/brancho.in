@@ -7,6 +7,7 @@ export default function CustomCursor() {
   const [enabled, setEnabled] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [pressed, setPressed] = useState(false);
+  const [nativeZone, setNativeZone] = useState(false);
 
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
@@ -23,6 +24,7 @@ export default function CustomCursor() {
       x.set(e.clientX);
       y.set(e.clientY);
       const target = e.target as HTMLElement;
+      setNativeZone(!!target.closest("[data-native-cursor]"));
       setHovering(!!target.closest("a, button, [role='button'], input, textarea, [data-hover]"));
     };
     const down = () => setPressed(true);
@@ -46,6 +48,8 @@ export default function CustomCursor() {
       <motion.div
         style={{ x: springX, y: springY }}
         className="absolute left-0 top-0"
+        animate={{ opacity: nativeZone ? 0 : 1 }}
+        transition={{ duration: 0.2 }}
       >
         <motion.div
           animate={{
@@ -59,6 +63,8 @@ export default function CustomCursor() {
       <motion.div
         style={{ x, y }}
         className="absolute left-0 top-0"
+        animate={{ opacity: nativeZone ? 0 : 1 }}
+        transition={{ duration: 0.2 }}
       >
         <motion.div
           animate={{ scale: pressed ? 0.9 : 1 }}

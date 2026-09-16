@@ -8,6 +8,7 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import CustomCursor from "@/components/layout/CustomCursor";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import ChatWidget from "@/components/corporate/ChatWidget";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   const [navStage, setNavStage] = useState<0 | 1 | 2>(0);
@@ -36,6 +37,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <ScrollProgress />
       <CustomCursor />
       <ChatWidget />
+      <CookieConsent />
     </>
   );
 }
