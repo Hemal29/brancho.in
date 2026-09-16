@@ -53,13 +53,6 @@ export const jsonLd = {
       areaServed: ["Veraval"],
       priceRange: "₹₹",
       image: "https://brancho.in/og-image.png",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "12000",
-        bestRating: "5",
-        worstRating: "1",
-      },
     },
     {
       "@type": "Organization",

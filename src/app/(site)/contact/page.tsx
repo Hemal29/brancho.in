@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Brancho",
-    description: "Talk to the team behind 100,000 happy homes.",
+    description: "Talk to the Brancho team.",
     url: "https://brancho.in/contact",
   },
 };

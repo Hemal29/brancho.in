@@ -20,7 +20,6 @@ export default function CitiesPage() {
           {[
             { v: "1", l: "City live today" },
             { v: "2021", l: "Since — Veraval" },
-            { v: "4.9★", l: "City-wide rating" },
           ].map((s) => (
             <div key={s.l}>
               <p className="font-heading text-3xl font-bold text-ink">{s.v}</p>

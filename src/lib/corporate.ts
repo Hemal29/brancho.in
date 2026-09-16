@@ -218,19 +218,6 @@ export const BUSINESSES: Business[] = [
 
 export const NEWSROOM = [
   {
-    slug: "brancho-crosses-100k-customers",
-    category: "Company News",
-    title: "Brancho crosses 100,000 happy customers across Gujarat",
-    excerpt: "A milestone built on trust, verification and service excellence.",
-    date: "July 2026",
-    readTime: "4 min",
-    body: [
-      "Brancho today announced it has crossed 100,000 customers served across Gujarat — a milestone reached seven years after a single van rolled out of Junagadh with three professionals and a promise of trust.",
-      "The company credits the achievement to its multi-point verification protocol, transparent pricing and a technology platform that has made home services predictable.",
-      "Brancho plans to build on this momentum with its national expansion roadmap beginning Q1 2027.",
-    ],
-  },
-  {
     slug: "ai-allocation-engine",
     category: "Technology",
     title: "How AI matches the right professional to your home",
@@ -239,7 +226,7 @@ export const NEWSROOM = [
     readTime: "6 min",
     body: [
       "Every Brancho booking is matched by an AI allocation engine that weighs skill match, distance, availability, ratings and workmanship history in real time.",
-      "The system has reduced average arrival times by 32% and improved first-time-fix rates to 96% across live cities.",
+      "The system has improved average arrival times and first-time-fix rates across live cities.",
       "Future versions will predict demand per locality and proactively position professionals.",
     ],
   },
@@ -287,7 +274,7 @@ export const NEWSROOM = [
     date: "January 2026",
     readTime: "5 min",
     body: [
-      "The report details Brancho's eco-friendly product usage, low-water cleaning techniques and the employment generated for over 5,000 verified professionals.",
+      "The report details Brancho's eco-friendly product usage, low-water cleaning techniques and the employment generated for verified professionals.",
     ],
   },
 ];
@@ -342,9 +329,9 @@ export const FUTURE_DETAILS: FutureDetail[] = [
       { title: "Community Care", description: "Emergency support and relief drives for families of service professionals in times of crisis." },
     ],
     stats: [
-      { value: "5,000+", label: "Professionals trained" },
-      { value: "1,200+", label: "Families supported" },
-      { value: "3", label: "Skilling centres" },
+      { value: "2", label: "First skilling centres" },
+      { value: "2", label: "Launch cities" },
+      { value: "2026", label: "Foundation launch year" },
     ],
     milestones: [
       { phase: "2026", title: "Foundation launch", description: "Independent registration and the first two skilling centres in Junagadh and Veraval." },
@@ -369,9 +356,9 @@ export const FUTURE_DETAILS: FutureDetail[] = [
       { title: "Livelihood Uplift", description: "Direct employment, upskilling and fair-pay practices for thousands of verified professionals." },
     ],
     stats: [
-      { value: "40+", label: "School programmes" },
-      { value: "8,000+", label: "Community sessions" },
-      { value: "₹2 Cr+", label: "Cumulative CSR spend" },
+      { value: "15", label: "New school water projects" },
+      { value: "2027", label: "Digital literacy in every city" },
+      { value: "2028", label: "First verified impact report" },
     ],
     milestones: [
       { phase: "2026", title: "Expand water programme", description: "15 new municipal schools receive safe-drinking-water infrastructure." },
@@ -396,9 +383,9 @@ export const FUTURE_DETAILS: FutureDetail[] = [
       { title: "Green Services", description: "Low-water, chemical-free cleaning technologies that reduce environmental impact." },
     ],
     stats: [
-      { value: "12", label: "Active prototypes" },
-      { value: "200+", label: "Field trials" },
-      { value: "5", label: "Patents filed" },
+      { value: "500", label: "Homes in sensor pilot" },
+      { value: "2027", label: "Robotics pilot" },
+      { value: "2028", label: "First lab products" },
     ],
     milestones: [
       { phase: "2026", title: "First field deployments", description: "Predictive-maintenance sensors go live in 500 partner homes." },
@@ -413,8 +400,8 @@ export const FUTURE_DETAILS: FutureDetail[] = [
     description: "Predictive allocation, quality monitoring and conversational care that keeps every booking flawless.",
     status: "Live",
     overview: [
-      "Brancho AI is the intelligence layer behind every booking. It matches the right professional to the right home, predicts demand before it happens and monitors quality on every single visit.",
-      "The platform has cut average arrival times by 32% and improved first-time-fix rates to 96% across live cities — and it learns more with every completed service.",
+      "Brancho AI is the intelligence layer behind every booking. It matches the right professional to the right home, predicts demand before it happens and monitors quality on every single visit — and it learns more with every completed service.",
+      "Every booking is matched on skill, distance, availability, ratings and workmanship history — in under a second.",
     ],
     pillars: [
       { title: "Smart Allocation", description: "Real-time matching on skill, distance, ratings and workmanship history — in under a second." },
@@ -423,9 +410,9 @@ export const FUTURE_DETAILS: FutureDetail[] = [
       { title: "Conversational Care", description: "An assistant that answers booking questions, reschedules slots and resolves issues instantly." },
     ],
     stats: [
-      { value: "-32%", label: "Arrival time" },
-      { value: "96%", label: "First-time fix" },
-      { value: "100%", label: "Services monitored" },
+      { value: "5", label: "Signals weighed per match" },
+      { value: "Live", label: "Demand heatmaps" },
+      { value: "24×7", label: "Quality monitoring" },
     ],
     milestones: [
       { phase: "2026", title: "Generalised allocation", description: "Allocation engine opens to vertical businesses beyond home services." },
@@ -477,9 +464,9 @@ export const FUTURE_DETAILS: FutureDetail[] = [
       { title: "Long-Term Roadmap", description: "Capital deployed against the national and international expansion plan, not short-term moves." },
     ],
     stats: [
-      { value: "100K+", label: "Customers served" },
-      { value: "5,000+", label: "Professionals" },
-      { value: "25+", label: "Cities" },
+      { value: "1", label: "City live today" },
+      { value: "8", label: "Service categories" },
+      { value: "2019", label: "Founded" },
     ],
     milestones: [
       { phase: "2026", title: "Annual Report", description: "FY2025–26 annual report with audited financials published in the Download Center." },
@@ -499,14 +486,14 @@ export const FUTURE_DETAILS: FutureDetail[] = [
     ],
     pillars: [
       { title: "Eco-Friendly Products", description: "Biodegradable, skin-safe cleaning products across every service category." },
-      { title: "Water Conservation", description: "Low-water and steam-cleaning techniques that cut water use by up to 70%." },
+      { title: "Water Conservation", description: "Low-water and steam-cleaning techniques that reduce water use." },
       { title: "Zero-Waste Operations", description: "Digital invoices, reusable equipment and plastic-free consumables." },
       { title: "Responsible Employment", description: "Fair pay, safety equipment, insurance and dignified treatment for every professional." },
     ],
     stats: [
-      { value: "-70%", label: "Water in cleaning" },
-      { value: "100%", label: "Biodegradable products" },
-      { value: "0", label: "Single-use plastic" },
+      { value: "4", label: "Focus areas" },
+      { value: "0", label: "Single-use plastic goal" },
+      { value: "2026", label: "First impact report" },
     ],
     milestones: [
       { phase: "2026", title: "First impact report", description: "Baseline impact report published covering water, waste and livelihoods." },
@@ -560,7 +547,7 @@ export const TIMELINE = [
   { year: "2023", title: "Technology platform", description: "AI allocation, live tracking and digital-first operations go live." },
   { year: "2024", title: "Businesses portfolio", description: "Brancho Water, Home Care and Urgent Care become independent businesses." },
   { year: "2025", title: "Family & student services", description: "MyFamNest and Brancho Students extend care beyond the walls of the home." },
-  { year: "2026", title: "100,000 families", description: "National vision with a measured international roadmap." },
+  { year: "2026", title: "Looking ahead", description: "National vision with a measured international roadmap." },
 ];
 
 export const CULTURE = [
@@ -659,12 +646,6 @@ export const MEDIA_VIDEOS = [
 ];
 
 export const PRESS = [
-  {
-    outlet: "The Economic Times",
-    title: "Home services platform Brancho crosses 100,000 customers in Gujarat",
-    date: "July 2026",
-    type: "Feature",
-  },
   {
     outlet: "YourStory",
     title: "How Brancho built trust in home services, one verification at a time",

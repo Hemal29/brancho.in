@@ -145,8 +145,8 @@ export default function AppPage() {
               Get the Brancho app today
             </h2>
             <p className="mt-4 text-muted">
-              Available for free on iOS and Android. Trusted by 100,000+ families and
-              5,000+ service professionals across India.
+              Available for free on iOS and Android. Book verified home services,
+              track your professional live and pay securely.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <AppStoreButton light />
