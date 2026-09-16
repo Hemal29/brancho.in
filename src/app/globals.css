@@ -229,6 +229,17 @@ h6 {
   .custom-cursor-active [role="button"] {
     cursor: none;
   }
+  /* Native cursor stays visible inside important dialogs (e.g. cookie consent) */
+  .custom-cursor-active [data-native-cursor],
+  .custom-cursor-active [data-native-cursor] a,
+  .custom-cursor-active [data-native-cursor] button,
+  .custom-cursor-active [data-native-cursor] [role="button"] {
+    cursor: auto;
+  }
+  .custom-cursor-active [data-native-cursor] a,
+  .custom-cursor-active [data-native-cursor] button {
+    cursor: pointer;
+  }
 }
 
 /* Smooth image reveal */
