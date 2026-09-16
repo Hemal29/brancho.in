@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 import Newsletter from "@/components/corporate/Newsletter";
+import { CookieSettingsButton } from "@/components/layout/CookieConsent";
 import { CONTACT, BUSINESSES, LEGAL_FAQ_LINKS } from "@/lib/corporate";
 
 const SocialLinkedIn = () => (
@@ -169,7 +170,10 @@ export default function Footer() {
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Brancho Technologies Pvt. Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-white/50">Made with care in Veraval, Gujarat, India.</p>
+          <div className="flex items-center gap-5">
+            <CookieSettingsButton className="text-xs text-white/50 transition-colors hover:text-white" />
+            <p className="text-xs text-white/50">Made with care in Veraval, Gujarat, India.</p>
+          </div>
         </div>
       </div>
     </footer>

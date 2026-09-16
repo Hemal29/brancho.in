@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cookie, X, ShieldCheck, BarChart3, Megaphone } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -59,7 +60,22 @@ function Toggle({
   );
 }
 
+export function CookieSettingsButton({ className }: { className?: string }) {
+  return (
+    <button
+      onClick={() =>
+        window.dispatchEvent(new Event("brancho:open-cookie-settings"))
+      }
+      className={className}
+    >
+      Cookie Settings
+    </button>
+  );
+}
+
 export default function CookieConsent() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [visible, setVisible] = useState(false);
   const [customizing, setCustomizing] = useState(false);
   const [prefs, setPrefs] = useState<Preferences>({
@@ -68,16 +84,22 @@ export default function CookieConsent() {
   });
 
   useEffect(() => {
-    let stored: string | null = null;
+    if (!isHome) return;
     try {
-      stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored) as Partial<Preferences>;
+        setPrefs({
+          analytics: parsed.analytics ?? true,
+          marketing: parsed.marketing ?? false,
+        });
+      }
     } catch {
-      stored = null;
+      // ignore — defaults apply
     }
-    if (stored) return;
     const t = setTimeout(() => setVisible(true), 1200);
     return () => clearTimeout(t);
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     const reopen = () => {
@@ -97,8 +119,11 @@ export default function CookieConsent() {
     [prefs]
   );
 
+  if (!isHome) return null;
+
   return (
-    <AnimatePresence>
+    <>
+      <AnimatePresence>
       {visible && (
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -259,6 +284,7 @@ export default function CookieConsent() {
           </div>
         </motion.div>
       )}
-    </AnimatePresence>
+      </AnimatePresence>
+    </>
   );
 }
