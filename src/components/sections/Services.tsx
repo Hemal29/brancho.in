@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -44,33 +45,48 @@ export default function Services() {
               <motion.article
                 key={service.title}
                 variants={item}
-                className="group relative overflow-hidden rounded-2xl border border-line bg-surface p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-transparent hover:shadow-2xl hover:shadow-navy/10"
+                className="group relative overflow-hidden rounded-2xl border border-line bg-surface shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-transparent hover:shadow-2xl hover:shadow-navy/10"
               >
-                <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-accent to-gold transition-transform duration-500 group-hover:scale-x-100" />
-                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/5 transition-all duration-500 group-hover:scale-150 group-hover:bg-accent/10" />
-
-                <div className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-navy text-gold transition-all duration-500 group-hover:bg-accent group-hover:text-white">
-                  <Icon size={24} strokeWidth={1.75} />
+                <div className="absolute inset-x-0 top-0 z-10 h-1 origin-left scale-x-0 bg-gradient-to-r from-accent to-gold transition-transform duration-500 group-hover:scale-x-100" />
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={`${service.title} service by Brancho`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+                  <span className="absolute right-4 top-4 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+                    {service.price}
+                  </span>
+                  <div className="absolute -bottom-0 left-6 flex h-12 w-12 translate-y-1/2 items-center justify-center rounded-xl bg-navy text-gold shadow-lg transition-all duration-500 group-hover:bg-accent group-hover:text-white">
+                    <Icon size={22} strokeWidth={1.75} />
+                  </div>
                 </div>
 
-                <h3 className="relative font-heading text-lg font-semibold text-ink">
-                  {service.title}
-                </h3>
-                <p className="relative mt-2.5 text-sm leading-relaxed text-muted">
-                  {service.description}
-                </p>
+                <div className="p-7 pt-9">
+                  <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/5 transition-all duration-500 group-hover:scale-150 group-hover:bg-accent/10" />
 
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-deep transition-colors group-hover:text-accent"
-                  aria-label={`Book ${service.title}`}
-                >
-                  Read More
-                  <ArrowUpRight
-                    size={15}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </Link>
+                  <h3 className="relative font-heading text-lg font-semibold text-ink">
+                    {service.title}
+                  </h3>
+                  <p className="relative mt-2.5 text-sm leading-relaxed text-muted">
+                    {service.description}
+                  </p>
+
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-deep transition-colors group-hover:text-accent"
+                    aria-label={`Book ${service.title}`}
+                  >
+                    Read More
+                    <ArrowUpRight
+                      size={15}
+                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </Link>
+                </div>
               </motion.article>
             );
           })}
@@ -80,6 +96,15 @@ export default function Services() {
             variants={item}
             className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-navy p-7 text-white shadow-xl shadow-navy/20"
           >
+            <Image
+              src="/hero-home-service.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className="object-cover opacity-30 transition-transform duration-700 group-hover:scale-105"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/30" />
             <div className="dot-grid-light absolute inset-0 opacity-40" />
             <div className="relative">
               <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-gold">

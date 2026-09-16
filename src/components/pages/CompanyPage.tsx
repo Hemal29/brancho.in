@@ -924,7 +924,7 @@ export default function CompanyPage() {
             title="The team building India's most trusted home services"
             className="mb-14"
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-sm gap-6">
             {LEADERSHIP.map((person, i) => (
               <motion.div
                 key={person.name}

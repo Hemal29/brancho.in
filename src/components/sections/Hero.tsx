@@ -82,11 +82,11 @@ export default function Hero() {
         initial="hidden"
         animate="show"
         style={{ opacity: contentOpacity, y: contentY }}
-        className="container-wide relative z-10 mt-8 pb-16"
+        className="container-wide relative z-10 mt-8 pb-16 pt-24 sm:pt-28"
       >
         <motion.h1
           variants={item}
-          className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+          className="max-w-4xl text-balance text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl sm:leading-[1.05] lg:text-7xl"
         >
           Trusted Services.{" "}
           <span className="text-gradient">Right at Your Doorstep.</span>
@@ -94,12 +94,12 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-7 max-w-2xl text-lg leading-relaxed text-white/75 sm:text-xl"
+          className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:mt-7 sm:text-xl"
         >
           Book trusted professionals for everyday home services with Brancho.
         </motion.p>
 
-        <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-2.5">
+        <motion.div variants={item} className="mt-6 flex flex-wrap items-center gap-2.5 sm:mt-8">
           <span className="text-sm font-medium text-white/60">Select your city:</span>
           {["Veraval"].map((city) => (
             <Link
@@ -115,16 +115,16 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
-          <MagneticButton href="/app" variant="light" size="lg">
+        <motion.div variants={item} className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          <MagneticButton href="/app" variant="light" size="lg" className="w-full sm:w-auto">
             <Download size={18} />
             Download App
           </MagneticButton>
-          <MagneticButton href="/services" variant="primary" size="lg">
+          <MagneticButton href="/services" variant="primary" size="lg" className="w-full sm:w-auto">
             Book a Service
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </MagneticButton>
-          <MagneticButton href="https://joinbrancho.com/" target="_blank" rel="noopener noreferrer" variant="ghost" size="lg" className="border-white/25 text-white hover:border-white/60 hover:bg-white/10">
+          <MagneticButton href="https://joinbrancho.com/" target="_blank" rel="noopener noreferrer" variant="ghost" size="lg" className="w-full border-white/25 text-white hover:border-white/60 hover:bg-white/10 sm:w-auto">
             <UserPlus size={18} />
             Become a Partner
           </MagneticButton>

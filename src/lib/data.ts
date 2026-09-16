@@ -423,24 +423,6 @@ export const LEADERSHIP = [
     bio: "Tech entrepreneur and software developer from Veraval, Gujarat. Built Brancho to bring verified, on-demand home services to local communities.",
     image: "/team/bhavy.svg",
   },
-  {
-    name: "Meera Patel",
-    role: "Chief Operating Officer",
-    bio: "Operations leader who scaled Brancho's partner network from 50 to 5,000 verified professionals across Gujarat.",
-    image: "/team/meera.svg",
-  },
-  {
-    name: "Aditya Sharma",
-    role: "Chief Technology Officer",
-    bio: "Built the AI allocation engine and real-time operations platform powering every Brancho booking nationwide.",
-    image: "/team/aditya.svg",
-  },
-  {
-    name: "Kavita Joshi",
-    role: "Chief Experience Officer",
-    bio: "Champions service quality and customer trust — from professional training to the Brancho service guarantee.",
-    image: "/team/kavita.svg",
-  },
 ];
 
 export const VALUES = [
