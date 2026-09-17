@@ -12,7 +12,6 @@ import type { Business } from "@/lib/corporate";
 
 const BUSINESS_HERO_IMAGES: Record<string, string> = {
   "home-care": "/hero-home-service.jpg",
-  "urgent-care": "/services/electric-care.jpg",
   myfamnest: "/heroes/family.jpg",
   students: "/heroes/students.jpg",
 };

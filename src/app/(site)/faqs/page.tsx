@@ -5,7 +5,7 @@ import { FAQS_EXTRA } from "@/lib/corporate";
 export const metadata: Metadata = {
   title: "FAQs — Help Centre & Answers",
   description:
-    "Answers to the most common questions about Brancho — verification, pricing, refunds, cities, emergency services, becoming a partner and more.",
+    "Answers to the most common questions about Brancho — verification, pricing, refunds, cities, becoming a partner and more.",
   alternates: { canonical: "/faqs" },
   openGraph: {
     title: "Brancho FAQs — Help Centre",

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
-import { Menu, X, Sun, Moon, ArrowRight, ChevronDown, Search, Droplets, Home, Zap, HeartHandshake, GraduationCap, ArrowUpRight } from "lucide-react";
+import { Menu, X, Sun, Moon, ArrowRight, ChevronDown, Search, Droplets, Home, HeartHandshake, GraduationCap, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getAppBookingUrl } from "@/lib/app-links";
 import type { LucideIcon } from "lucide-react";
@@ -73,7 +73,6 @@ const COMPANY_MENU = [
 const BUSINESS_MENU: Array<{ label: string; href: string; description: string; icon: LucideIcon }> = [
   { label: "Brancho Water", href: "/businesses/water", description: "Packaged drinking water", icon: Droplets },
   { label: "Brancho Home Care", href: "/businesses/home-care", description: "Care plans & cleaning", icon: Home },
-  { label: "Brancho Urgent Care", href: "/businesses/urgent-care", description: "24×7 emergency response", icon: Zap },
   { label: "MyFamNest", href: "/businesses/myfamnest", description: "Connected family home", icon: HeartHandshake },
   { label: "Brancho Students", href: "/businesses/students", description: "Student living services", icon: GraduationCap },
 ];

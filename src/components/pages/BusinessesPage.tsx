@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Droplets, Home, Zap, HeartHandshake, GraduationCap, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Droplets, Home, HeartHandshake, GraduationCap, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABand from "@/components/sections/CTABand";
@@ -13,14 +13,13 @@ import type { LucideIcon } from "lucide-react";
 const BUSINESS_ICONS: Record<string, LucideIcon> = {
   water: Droplets,
   "home-care": Home,
-  "urgent-care": Zap,
   myfamnest: HeartHandshake,
   students: GraduationCap,
 };
 
 const PROMISE = [
   { title: "One brand standard", description: "Every business runs on the same verification, transparency and quality guarantee that built Brancho." },
-  { title: "A shared tech platform", description: "Booking, tracking and quality monitoring are unified across all five businesses." },
+  { title: "A shared tech platform", description: "Booking, tracking and quality monitoring are unified across all four businesses." },
   { title: "One care team", description: "Your support, billing and warranty are handled by a single accountable team." },
 ];
 
@@ -52,7 +51,7 @@ export default function BusinessesPage() {
         <div className="container-wide">
           <SectionHeading
             eyebrow="The Portfolio"
-            title="Five businesses. One promise."
+            title="Four businesses. One promise."
             description="Each business operates with its own specialists, standards and roadmap — unified by Brancho's platform of trust."
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -106,7 +105,7 @@ export default function BusinessesPage() {
               The Brancho Standard
             </span>
             <h2 className="mt-6 text-balance font-heading text-3xl font-semibold leading-tight sm:text-4xl">
-              What binds five businesses into one Brancho
+              What binds four businesses into one Brancho
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
