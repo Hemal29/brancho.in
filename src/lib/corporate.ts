@@ -125,36 +125,6 @@ export const BUSINESSES: Business[] = [
     ctaHref: "/services",
   },
   {
-    slug: "urgent-care",
-    name: "Brancho Urgent Care",
-    parent: "Brancho",
-    tagline: "When your home can't wait, neither do we.",
-    description:
-      "60-minute emergency response for electrical failures, plumbing bursts, lockouts and safety-critical repairs, available 24 × 7.",
-    hero: "Broken at midnight? We arrive in 60 minutes.",
-    overview: [
-      "Brancho Urgent Care is our rapid-response unit for the moments that cannot wait — a burst pipe, a live wire, a failed lock or a child locked out. Our emergency responders are on-call around the clock in every live city.",
-      "With live ETA tracking, upfront surge-free pricing and a guaranteed response time, Urgent Care brings calm to the moments that matter most.",
-    ],
-    mission: "To be there when a home needs help the most.",
-    services: [
-      { title: "Emergency Electrical", description: "Power failures, sparking, short-circuits and switchboard burnouts handled with immediate triage." },
-      { title: "Emergency Plumbing", description: "Burst pipes, overflows, gas leaks and blockages stabilised within the response window." },
-      { title: "Locksmith & Access", description: "Locked doors, broken keys and safe-opening with non-destructive entry first." },
-      { title: "Pest Emergencies", description: "Bee nests, rodent sightings and sudden infestations managed with safe removal." },
-      { title: "Appliance Failures", description: "Refrigerator, geyser and AC failures when a family cannot wait for a scheduled visit." },
-      { title: "Gas & Safety Checks", description: "Immediate safety assessment of gas leaks, carbon monoxide concerns and wiring hazards." },
-    ],
-    highlights: ["60-minute response", "24 × 7 availability", "Surge-free pricing", "Live ETA tracking", "Trained emergency crew", "Family safety first"],
-    gallery: ["/about.svg", "/hero-poster.svg", "/about.svg", "/hero-poster.svg"],
-    faqs: [
-      { q: "How fast is the response?", a: "Our guaranteed response time is 60 minutes in live cities during emergency hours, with live tracking so you always know where help is." },
-      { q: "Is emergency pricing higher?", a: "No. Emergency rates are fixed and published, with no surge pricing even at midnight." },
-    ],
-    cta: "Call urgent support",
-    ctaHref: "/contact",
-  },
-  {
     slug: "myfamnest",
     name: "MyFamNest",
     parent: "Brancho",
@@ -252,18 +222,6 @@ export const NEWSROOM = [
     body: [
       "From sealing window leaks to servicing ACs and checking drainage, a seasonal care routine prevents most monsoon headaches.",
       "Brancho Home Care plans now include a dedicated monsoon module.",
-    ],
-  },
-  {
-    slug: "urgent-care-launch",
-    category: "Product",
-    title: "Brancho Urgent Care launches with 60-minute response promise",
-    excerpt: "24 × 7 emergency home response is now live across all Brancho cities.",
-    date: "March 2026",
-    readTime: "4 min",
-    body: [
-      "Brancho Urgent Care is now live, guaranteeing a 60-minute response for emergency electrical, plumbing, locksmith and safety issues.",
-      "The service is staffed by a dedicated on-call crew and backed by live ETA tracking.",
     ],
   },
   {
@@ -545,7 +503,7 @@ export const TIMELINE = [
   { year: "2019", title: "Founded in Junagadh", description: "Brancho begins with one van, three professionals and a promise of trust." },
   { year: "2021", title: "Gujarat expansion", description: "Brancho grows across Saurashtra, reaching Rajkot and Veraval." },
   { year: "2023", title: "Technology platform", description: "AI allocation, live tracking and digital-first operations go live." },
-  { year: "2024", title: "Businesses portfolio", description: "Brancho Water, Home Care and Urgent Care become independent businesses." },
+  { year: "2024", title: "Businesses portfolio", description: "Brancho Water and Home Care become independent businesses." },
   { year: "2025", title: "Family & student services", description: "MyFamNest and Brancho Students extend care beyond the walls of the home." },
   { year: "2026", title: "Looking ahead", description: "National vision with a measured international roadmap." },
 ];
@@ -603,7 +561,7 @@ export const BRANCHES = [
 export const SEARCHABLE_PAGES = [
   { title: "Home", path: "/", description: "India's trusted home services platform" },
   { title: "Services", path: "/services", description: "AC cleaning, deep cleaning, electrician, plumbing and more" },
-  { title: "Businesses", path: "/businesses", description: "Brancho Water, Home Care, Urgent Care and more" },
+  { title: "Businesses", path: "/businesses", description: "Brancho Water, Home Care and more" },
   { title: "How It Works", path: "/how-it-works", description: "Five simple steps from booking to completion" },
   { title: "Mobile App", path: "/app", description: "Customer and partner apps" },
   { title: "Cities", path: "/cities", description: "Where Brancho is live today" },
@@ -660,7 +618,7 @@ export const PRESS = [
   },
   {
     outlet: "Gujarat Samachar",
-    title: "Junagadh-born Brancho expands urgent home care across Gujarat",
+    title: "Junagadh-born Brancho expands home care across Gujarat",
     date: "March 2026",
     type: "News",
   },
@@ -686,7 +644,7 @@ export const FAQS_EXTRA = [
   { q: "Is there a warranty on services?", a: "Selected services carry a workmanship warranty of up to 90 days. If the same issue recurs, we fix it free." },
   { q: "What if I'm not satisfied?", a: "We'll send a professional back at no cost, or issue a refund — whichever you prefer." },
   { q: "How do refunds work?", a: "Refunds for cancellations or quality issues are processed within 5–7 working days to the original payment method or Brancho wallet. See the Refund Policy." },
-  { q: "Do you offer emergency services?", a: "Yes — Brancho Urgent Care guarantees a 60-minute response for emergencies, 24 × 7." },
+  { q: "Do you offer emergency services?", a: "For urgent issues, contact our support team at support@brancho.in or call +91 7572 836402 and we will prioritise your booking." },
   { q: "Can I pay in cash?", a: "Yes. Pay online via UPI, cards or wallets, or pay by cash on completion where available." },
   { q: "How do I contact support?", a: "Email support@brancho.in, call +91 7572 836402, or use live chat — our team answers in minutes." },
 ];

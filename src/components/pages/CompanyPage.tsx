@@ -819,7 +819,7 @@ export default function CompanyPage() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
               <span className="font-heading text-xs font-bold text-gold">BUT THIS IS ONLY THE BEGINNING</span>
               <p className="mt-4 text-base leading-relaxed text-white/70">
-                Brancho Home and Brancho Urgent Care are already live. But the vision doesn&apos;t stop there.
+                Brancho Home Care is already live. But the vision doesn&apos;t stop there.
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {[

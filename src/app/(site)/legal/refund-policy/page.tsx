@@ -54,7 +54,7 @@ const SECTIONS = [
     title: "Exceptions",
     body: [
       "Refunds do not apply to: services deliberately damaged after completion; third-party costs (e.g., replacement parts already purchased); or bookings where the professional was denied entry without notice.",
-      "Emergency (Urgent Care) callouts that are cancelled after dispatch are subject to the cancellation policy.",
+      "Emergency callouts that are cancelled after dispatch are subject to the cancellation policy.",
     ],
   },
   {

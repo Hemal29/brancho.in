@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import BusinessesPage from "@/components/pages/BusinessesPage";
 
 export const metadata: Metadata = {
-  title: "Brancho Businesses — Water, Home Care, Urgent Care, MyFamNest, Students",
+  title: "Brancho Businesses — Water, Home Care, MyFamNest, Students",
   description:
-    "Explore the Brancho family of businesses: Brancho Water, Brancho Home Care, Brancho Urgent Care, MyFamNest and Brancho Students — each built on one promise of trust.",
+    "Explore the Brancho family of businesses: Brancho Water, Brancho Home Care, MyFamNest and Brancho Students — each built on one promise of trust.",
   alternates: { canonical: "/businesses" },
   openGraph: {
     title: "Brancho Businesses — One family of companies",
