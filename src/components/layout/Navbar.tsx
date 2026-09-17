@@ -71,7 +71,7 @@ const COMPANY_MENU = [
 ];
 
 const BUSINESS_MENU: Array<{ label: string; href: string; description: string; icon: LucideIcon }> = [
-  { label: "Brancho Water", href: "/businesses/water", description: "RO, tank cleaning & testing", icon: Droplets },
+  { label: "Brancho Water", href: "/businesses/water", description: "Packaged drinking water", icon: Droplets },
   { label: "Brancho Home Care", href: "/businesses/home-care", description: "Care plans & cleaning", icon: Home },
   { label: "Brancho Urgent Care", href: "/businesses/urgent-care", description: "24×7 emergency response", icon: Zap },
   { label: "MyFamNest", href: "/businesses/myfamnest", description: "Connected family home", icon: HeartHandshake },

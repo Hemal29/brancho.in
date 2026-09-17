@@ -11,7 +11,6 @@ import CTABand from "@/components/sections/CTABand";
 import type { Business } from "@/lib/corporate";
 
 const BUSINESS_HERO_IMAGES: Record<string, string> = {
-  water: "/services/ro-care.jpg",
   "home-care": "/hero-home-service.jpg",
   "urgent-care": "/services/electric-care.jpg",
   myfamnest: "/heroes/family.jpg",
@@ -89,8 +88,12 @@ export default function BusinessDetailPage({ business }: { business: Business })
       <section className="bg-surface-soft py-24 lg:py-32">
         <div className="container-wide">
           <SectionHeading
-            eyebrow="What We Do"
-            title={`Services from ${business.name}`}
+            eyebrow={business.slug === "water" ? "Our Products" : "What We Do"}
+            title={
+              business.slug === "water"
+                ? `Packaged drinking water from ${business.name}`
+                : `Services from ${business.name}`
+            }
             align="left"
             className="mb-14"
           />
@@ -120,7 +123,11 @@ export default function BusinessDetailPage({ business }: { business: Business })
         <div className="container-wide relative">
           <SectionHeading
             eyebrow="Why Choose Us"
-            title="The standards behind every visit"
+            title={
+              business.slug === "water"
+                ? "The standards behind every bottle"
+                : "The standards behind every visit"
+            }
             dark
             className="mb-14"
           />
